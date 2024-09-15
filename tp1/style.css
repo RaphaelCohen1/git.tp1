@@ -1,0 +1,296 @@
+/* Header */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;/* Ajuste la hauteur automatiquement */
+  padding: 10px 0;/* Réduit un peu le padding */
+}
+
+header img {
+  height: 60px;
+}
+
+header h1 {
+  margin-left: 20px;
+  font-size: 24px;
+  color: #000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #1b1b1b;
+  font-weight: bold;
+}
+
+.hero {
+  background-color: black;
+  color: #ffffff; /* Assurez-vous que la couleur du texte est visible sur le fond */
+  padding: 20px; /* Ajoutez un padding pour distinguer le contenu du fond */
+  margin: 0;/* Élimine toute marge */
+}
+
+/* Hero Image */
+.hero img {
+  width: 52%;
+  color: #1b1b1b;
+  margin: 0 auto;
+  height: 300%;
+  display: block;
+  /*object-fit: cover;*/
+}
+
+.hero-biss{
+  background-color: black;
+}
+
+/* Pour aligner les éléments sur une ligne */
+.actions {
+  display: flex;
+  justify-content: space-between; /* Sépare le prix et le bouton */
+  align-items: center; /* Aligne verticalement */
+}
+
+/* Ajuster le style si nécessaire */
+.actions .new-price {
+  font-weight: bold;
+  margin-right: 10px; /* Un peu d'espace entre le prix et le bouton */
+}
+
+/* Style pour le bouton */
+.actions .button {
+  display: block; /* Le bouton occupe toute la largeur disponible */
+  background-color: #f78a1d;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: left; /* Aligne le texte à gauche */
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.actions .button:hover {
+  background-color: #000;
+}
+
+/* Articles */
+
+.articles {
+  background-color: #d3d3d3;
+  width: 50%;
+  padding: 20px 0; /* Ajoute un peu de padding pour aérer */
+  max-width: 100%;/* Ajuste la largeur au maximum de l'écran */
+  margin: 0 auto; /* Centrer la div articles dans la page */
+  display: flex;
+  flex-wrap: wrap;/* Permet aux éléments de s'enrouler sur plusieurs lignes */
+  justify-content: space-around; /* Distribue l'espace entre les éléments */
+  align-items: center; /* Centrer verticalement si nécessaire */
+}
+
+.articles.table {
+  width: 100%; /* Utilise toute la largeur disponible  */
+  margin: auto; /* Centre le tableau dans la div articles */
+  border-collapse: collapse; /* Pour un design propre */
+  table-layout: fixed;  /* cette propriété permet de fixer les largeurs des colonnes */
+}
+
+.th, td {
+  overflow: hidden;      /* cache le texte qui dépasse */
+  text-overflow: ellipsis; /* montre ... si le texte est coupé */
+  white-space: nowrap;   /* empêche le texte de s'enrouler */
+}
+
+.hero-article {
+  width: auto;
+  height: auto;
+  margin-top: 1px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background-color: black;
+  border-collapse: collapse; /* Pour un design propre */
+  table-layout: fixed;  /* cette propriété permet de fixer les largeurs des colonnes */
+
+}
+
+
+.product {
+  margin: 10px 10px 0 10px;/* Réduit la marge en haut, à droite, en bas et à gauche */
+  background-color: #fff;
+  width: 100%; /* Largeur à 100% du parent */
+  padding-top: 100%; /* Hauteur égale à la largeur pour former un carré */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0; /* Supprime la marge en bas */
+}
+
+/*Le container de la  div article*/
+.cont-articles{
+  background-color: #1b1b1b;
+  margin: 0;
+  padding: 0;
+}
+/* Image du produit */
+.product img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;/* Empêche l'image de dépasser sa taille parente */
+  height: auto; /* Garantit que l'image conserve ses proportions */
+  object-fit: cover; /* Maintient les proportions de l'image */
+}
+
+.product h3 {
+  position: absolute;
+  bottom: 10px; /* Place le texte en bas du conteneur */
+  left: 0;
+  right: 0;
+  font-size: 9px;
+  min-width: 0.02%;
+  color: #333;
+  margin: 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8); /* Fond légèrement transparent pour lisibilité */
+}
+
+/*L'image*/
+.img{
+  max-width: 50px;
+  max-height: 0.1px;
+  width: auto;
+  height: auto;
+}
+
+/* Prix */
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alignement à gauche */
+  margin-bottom: 10px; /* Ajoute un peu d'espace sous le prix */
+  padding-left: 10px; /* Ajoute un peu de padding pour l'alignement */
+  position: relative; /* Parent positionné en relatif pour que l'enfant puisse se positionner absolument */
+}
+
+.price-details {
+  display: flex; /* Utiliser flexbox pour aligner les éléments horizontalement */
+  justify-content: space-between; /* Espacer les éléments */
+  width: 20%; /* Prendre toute la largeur disponible */
+  align-items: center; /* Aligne les éléments verticalement */
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 10px; /* Espacement entre l'ancien prix et le nouveau prix */
+}
+
+.new-price {
+  color: #f00; /* Couleur du nouveau prix */
+  font-weight: bold;
+}
+
+.button {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #000;
+}
+
+
+/* Badge de réduction */
+.réduc {
+  background-color: #ffc107;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  position: absolute;
+  top: 10px; /* Ajuste légèrement la position */
+  right: 10px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;/* Réduit le padding pour diminuer la hauteur */
+  text-align: center;
+  margin-top: 0; /* Supprime la marge supérieure */
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-around; /* Espace égal entre les éléments */
+  align-items: flex-start; /* Aligne les éléments en haut */
+  flex-wrap: nowrap; /* Pas de retour à la ligne */
+  
+}
+
+footer .footer-item {
+  display: flex;
+  flex-direction: column; /* Place le texte sous l'image */
+  align-items: center; /* Centre l'image et le texte horizontalement */
+  text-align: center;
+  margin: 0 20px; /* Espace entre les items */
+}
+
+footer .footer-item img {
+  margin-bottom: 10px; /* Ajoute un espace entre l'image et le texte */
+}
+
+
+footer .links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+
+
+footer .icons img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+footer .social-links a img {
+  width: 20px;
+  margin: 0 5px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  gap: 20px; /* Espacement de 20px entre les liens */
+  background-color: white; /* Ajoute un fond blanc */
+  padding: 5px 10px; /* Ajoute un peu de padding pour espacer du contenu environnant */
+  border-radius: 5px; /* Optionnel : ajoute des coins arrondis */
+  margin: 0 auto;
+}
+
+.links a {
+  text-decoration: none;
+  color: gray;
+  text-align: center;
+}
